@@ -1,6 +1,7 @@
 package com.pe.automation.definition;
 
 import com.pe.automation.steps.BuyerSteps;
+
 import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -38,15 +39,13 @@ public class ArticuloDefinition {
 	}
 
 	@When("^seleccionamos la talla del calzado \"([^\"]*)\"$")
-	public void seleccionamos_la_talla_del_calzado(String arg1) throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+	public void seleccionamos_la_talla_del_calzado(String talla) throws Throwable {
+		buyerSteps.seleccionar_talla(talla);
 	}
 
 	@Then("^se imprime el numero de resultado$")
 	public void se_imprime_el_numero_de_resultado() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+		buyerSteps.obtener_numero_resultado();
 	}
 
 	@Then("^ordenamos por el precio ascendente$")

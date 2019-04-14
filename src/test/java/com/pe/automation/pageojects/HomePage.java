@@ -19,7 +19,7 @@ public class HomePage extends PageObject{
 	@FindBy(id="gh-btn")
 	public WebElementFacade btnBuscar; 
 	
-	@FindBy(xpath="/html[@class='font-marketsans']/body[@class='desktop gh-flex']/header[@id='gh']/div[@id='gh-top']/ul[@id='gh-topl']/li[@id='gh-p-1']/a[@class='gh-p']")
+	@FindBy(xpath="//a[contains(text(), 'ebay Ofertas')]")
 	public WebElementFacade lblHome;
 	
 	public void verificarHome() {
