@@ -35,13 +35,38 @@ public class BuyerSteps {
 	}
 	
 	@Step
-	public void seleccionar_talla(String strTalla) throws InterruptedException {
+	public void seleccionar_talla(String strTalla) {
 		resultadoPage.seleccionarTalla(strTalla);
 	}
 	
 	@Step
 	public void obtener_numero_resultado() {
 		resultadoPage.obtenerNumeroResultado();
+	}
+	
+	@Step
+	public void ordernar_por_precio_ascendente() {
+		resultadoPage.ordernarPorPrecioAscendente();
+	}
+	
+	@Step
+	public void obtener_productos_por_precios(String strCantidad) {
+		resultadoPage.obtenerProductosPorPrecios(strCantidad);
+	}
+	
+	@Step
+	public void realizar_pedido_de_productos(String strCantidad) {
+		resultadoPage.realizarPedidoDeProductos(strCantidad);
+	}
+	
+	@Step
+	public void listar_productos_por_nombre_ascendente() {
+		resultadoPage.listarProductosPorNombreAscendente();
+	}
+	
+	@Step
+	public void listar_productos_por_precio_descendente() {
+		resultadoPage.listarProductosPorPrecioDescendente();
 	}
 	
 }

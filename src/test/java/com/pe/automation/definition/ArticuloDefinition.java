@@ -2,7 +2,6 @@ package com.pe.automation.definition;
 
 import com.pe.automation.steps.BuyerSteps;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -50,8 +49,27 @@ public class ArticuloDefinition {
 
 	@Then("^ordenamos por el precio ascendente$")
 	public void ordenamos_por_el_precio_ascendente() throws Throwable {
-		// Write code here that turns the phrase above into concrete actions
-		throw new PendingException();
+		buyerSteps.ordernar_por_precio_ascendente();
+	}
+	
+	@Then("^realizar el pedido tomando los primeros \"([^\"]*)\" resultados$")
+	public void realizar_el_pedido_tomando_los_primeros_resultados(String cantidad) throws Throwable {
+		buyerSteps.realizar_pedido_de_productos(cantidad);
+	}
+
+	@Then("^tomar los primeros \"([^\"]*)\" productos con sus precios$")
+	public void tomar_los_primeros_productos_con_sus_precios(String cantidad) throws Throwable {
+		buyerSteps.obtener_productos_por_precios(cantidad);
+	}
+
+	@Then("^imprimir los productos por nombre ascendente$")
+	public void imprimir_los_productos_por_nombre_ascendente() throws Throwable {
+		buyerSteps.listar_productos_por_nombre_ascendente();
+	}
+
+	@Then("^imprimir los productos por precio en modo descendiente$")
+	public void imprimir_los_productos_por_precio_en_modo_descendiente() throws Throwable {
+		buyerSteps.listar_productos_por_precio_descendente();
 	}
 
 }

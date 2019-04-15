@@ -12,3 +12,7 @@ Feature: Formulario para busqueda de articulos
     And seleccionamos la talla del calzado "10"
     Then se imprime el numero de resultado
     And ordenamos por el precio ascendente
+    And realizar el pedido tomando los primeros "5" resultados
+    And tomar los primeros "5" productos con sus precios
+    And imprimir los productos por nombre ascendente
+    And imprimir los productos por precio en modo descendiente
